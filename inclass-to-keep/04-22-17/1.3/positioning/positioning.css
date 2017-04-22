@@ -1,0 +1,31 @@
+#fixed {
+    height: 200px;
+    width: 200px;
+    background: red;
+position: fixed; 
+
+}
+
+#content{
+    padding: 50px 500px 50px 50px;
+
+}
+
+#middle{
+    height: 300px;
+    width: 100%;
+    background: blue;
+position: relative;
+
+}
+
+#absolute{
+    height: 100px;
+    width: 100px;
+    background: yellow;
+    position: absolute;
+bottom: 0px;
+right: -10px;
+
+
+}
