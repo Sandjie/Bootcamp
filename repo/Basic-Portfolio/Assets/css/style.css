@@ -1,0 +1,97 @@
+body {
+ background-image: url("../images/background2.png");
+ font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+ font-size: 18px;
+ color: #777;
+ line-height: 34px;
+}
+
+
+* {
+ box-sizing: border-box;
+}
+
+
+
+.container {
+ clear: both;
+ margin: 0 auto;
+ width: 100%;
+ max-width: 960px;
+}
+
+h1,
+h2,
+h3,
+p {
+ margin-bottom: 20px;
+}
+
+#masthead {
+ z-index: 99;
+ margin: 0 0 30px;
+ overflow: auto;
+ width: 100%;
+ color: #fff;
+ background: #fff;
+ border-bottom: 2px solid #ccc;
+}
+
+#logo {
+ width: 390px;
+ height: 90px;
+ float: left;
+ font-family: 'Georgia', Times, Times New Roman, serif;
+ text-align: center;
+ line-height: 90px;
+ color: #fff;
+ font-weight: 700;
+ font-size: 30px;
+ text-decoration: none;
+ background: #4aaaa5 ;
+}
+
+nav {
+ float: right;
+ margin-top: 25px;
+}
+
+nav a {
+ display: inline-block;
+ margin-left: 15px;
+ padding-left: 15px;
+ color: #999;
+ text-decoration: none;
+ line-height: 18px;
+ border-left: 1px solid #efefef ;
+}
+
+nav a:first-child {
+ border-left: 0 none;
+}
+
+.main-section {
+float: left;
+background-color: #ffffff;
+border-color: #dddddd;
+width: 650px;
+font-size: x-large;
+color: white;
+
+}
+
+h1{
+font-family: 'Georgia', Times, Times New Roman, serif;
+color: #4aaaa5;
+
+}
+
+p {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+}
+
+.connect {
+
+}
+
