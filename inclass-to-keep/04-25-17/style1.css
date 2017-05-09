@@ -1,0 +1,12 @@
+.heading{
+    font-family: Courier New, Courier, monospace;
+    color: blue;
+    transition: color orange 2s ease;
+    
+}
+.link {
+    font-family: 'Times New Roman', Times, serif;
+    color: turquoise;
+    transition: color red 2s ease-in;
+    transform: rotate(360);
+}
