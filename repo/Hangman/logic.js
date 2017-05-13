@@ -1,11 +1,11 @@
 //Global Variables
 //Arrays, Variables
-var essentialOils = ['lavendar', 'thieves', 'frankincense', 'lemon', 'vetiver', 'melissa', 'ginger', 'oregano' ];
+var oils = ['lavendar', 'thieves', 'frankincense', 'lemon', 'vetiver', 'melissa', 'ginger', 'oregano' ];
 var selectedWord = "";
-var lettersInWord = "";
-var numBlanks = "";
-var blanksAndCorrectGuesses = "";
-var wrongGuesses = "";
+var lettersinWord = [];
+var numBlanks = []; 
+var blanks = []; //blanks here
+var wrongGuesses = [];
 
 
 //counters
@@ -15,58 +15,67 @@ var guesses = 9;
 
 //Functions
 
-function startGame (){
-    selectedWord = essentialOils[Math.floor(Math.random() * essentialOils.length)];
-    lettersInWord = selectedWord.split("");
-    numBlanks = lettersInWord.length;
+function startGame(){
+    selectedWord = oils[Math.floor(Math.random() * oils.length)];
+    lettersinWord = selectedWord.split("");
+    numBlanks = lettersinWord.length;
+}
+
 
     guesses = 9;
     wrongGuesses = [];
-    blanksAndCorrectGuesses = [];
+    blanks = [];
 
     //blanks for the word to be guessed
-    for (i=0; i<numBlanks; i++){
-        blanksAndCorrectGuesses.push("_ ");
+    for (var i=0; i< numBlanks; i++){
+        blanks.push("_");
     }
+      console.log(selectedWord);
+      console.log(lettersinWord);
+      console.log(blanks);
 
-    document.getElementById("wordToGuess").innerHTML = blanksAndCorrectGuesses.join("  ");
-    document.getElementById("numWrong").innerHTML = wrongGuesses;
-    document.getElementById("numLeft").innerHTML = guesses;
-    document.getElementById("winCount").innerHTML = winCount; 
-    document.getElementById("lossCount").innerHTML = lossCount;
+
+
+    // document.getElementById("wordToGuess").innerHTML = blanksAndCorrectGuesses.join("  ");
+    // document.getElementById("numWrong").innerHTML = wrongGuesses;
+    // document.getElementById("numLeft").innerHTML = guesses;
+    // document.getElementById("winCount").innerHTML = winCount; 
+    // document.getElementById("lossCount").innerHTML = lossCount;
     
 
-console.log (essentialOils);
-console.log (lettersInWord);
-console.log (numBlanks);
 
-}   
-function checkLetters(letter){
-    var isLetterInWord = false;
-    for ( i=0; i<numBlanks; i++){
-        if (selectedWord[i] == letter); 
-            isLetterInWord == true;
-}
+// }   
+// function checkLetters(letter){
+//     var isLetterInWord = false;
+//     for ( i=0; i < numBlanks; i++){
+//         if (selectedWord[i] == letter); 
+//             isLetterInWord == true;
+// }
 
-if (isLetterInWord){
-    for (var i=0; i<numBlanks; i++){
-    if (selectedWord[i] == letter){
-        blanksAndCorrectGuesses[i] = letter;
-    }
-}
-}
+// if (isLetterInWord){
+//     for (var i=0; i<numBlanks; i++){
+//     if (selectedWord[i] == letter){
+//         blanksAndCorrectGuesses[i] = letter;
+//     }
+// }
+// }
 
-else {
-    wrongLetter.push(letter);
-    wrongGuesses--
-}
-function roundComplete(){
-    console.log("Win count: " + winCount + "| Loss count: " + lossCount + "Guesses Left: " + wrongGuesses);
-}
-//Main process
+// else {
+//     wrongLetter.push(letter);
+//     wrongGuesses--
+// }
+// function roundComplete(){
+//     console.log("Win count: " + winCount + "| Loss count: " + lossCount + "Guesses Left: " + wrongGuesses);
+// }
+// //Main process
+// startGame();
+
+// document.onkeyup = function(event)  {
+//     var lettersGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+//     //checkLetters(lettersGuessed);
+//     //roundComplete();
+// }
+
+// console.log(lettersGuessed)};
+
 startGame();
-
-document.onkeyup = function(event)  {
-    var lettersGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-    checkLetters(lettersGuessed)
-}}
